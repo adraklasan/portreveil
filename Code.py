@@ -3,7 +3,7 @@ import termcolor #to print statement in diff colors
 
 #func for scan multiple port
 def Scan(target, ports):
-        print("\n" + "Starting scan for" + str(target))    
+        print("\n" + "Starting scan for : " + str(target))    
         for port in range(1, ports):
             Scan_port(target, port)
 
@@ -11,6 +11,7 @@ def Scan(target, ports):
 def Scan_port(ipaddress, port):
         try:    
             sock = socket.socket()
+            sock.settimeout(1)
             sock.connect(ipaddress, port)
             print("[+] Port OPEN " + str(port))
             sock.close()
