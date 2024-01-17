@@ -3,7 +3,7 @@ import termcolor #to print statement in diff colors
 
 #func for scan multiple port
 def Scan(target, ports):
-        print("\n" + "Starting scan for" + str(targets))    
+        print("\n" + "Starting scan for" + str(target))    
         for port in range(1, ports):
             Scan_port(target, port)
 
@@ -24,4 +24,4 @@ if ',' in targets:
     for ip_adr in targets.split(','):
         Scan(ip_adr.strip(' '), ports)
 else:
-    Scan_port(targets, ports)
+    Scan(targets, ports)
