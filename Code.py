@@ -11,7 +11,7 @@ def Scan(target, ports):
 def Scan_port(ipaddress, port):
         try:    
             sock = socket.socket()
-            sock.settimeout(1)
+            #sock.settimeout(1)
             sock.connect(ipaddress, port)
             print("[+] Port OPEN " + str(port))
             sock.close()
