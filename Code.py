@@ -1,3 +1,4 @@
+
 import socket #communicate w others in TCP & UDP
 import termcolor #to print statement in diff colors
 
@@ -12,7 +13,7 @@ def Scan_port(ipaddress, port):
         try:    
             sock = socket.socket()
             sock.settimeout(1)
-            sock.connect(ipaddress, port)
+            sock.connect((ipaddress, port))
             print("[+] Port OPEN " + str(port))
             sock.close()
         except:
