@@ -2,7 +2,7 @@
 import socket #communicate w others in TCP & UDP
 import termcolor #to print statement in diff colors
 
-#func for scan multiple port
+#func for scan multiple
 def Scan(target, ports):
         print("\n" + "Starting scan for : " + str(target))    
         for port in range(1, ports):
@@ -27,3 +27,10 @@ if ',' in targets:
         Scan(ip_adr.strip(' '), ports)
 else:
     Scan(targets, ports)
+
+print("made by pratham") 
+print("check")
+print("check")  
+print("check")  
+print("check")  
+print("check")  
